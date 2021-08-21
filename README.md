@@ -21,6 +21,8 @@ Summer 2021 term - links to Jupyter notebooks. (Links at the top of these notebo
 * [weather_datasets.ipynb](https://github.com/ds5110/stinky/blob/master/weather_datasets.ipynb)
 
 ### Data files - description of data folders and individual file names
+* The data folder contains all the csv files 
+1. 
 
 ## Project Idea: This Stinks
 
