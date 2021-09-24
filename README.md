@@ -1,6 +1,88 @@
-# stinky
+# Stinky
 
-## Northeastern University student projects
+In the summer of 2021, a group of Northeastern University students
+applied their data-science skills to help the community
+in Portland Maine shed light on a nasty environmental problem.
+As of fall 2021, the project is ongoing.
+
+## Project partners
+
+* The Greater Portland Council of Governments (GPCOG)
+* The Sierra Club
+* Roux Institute
+
+## Project Idea: This Stinks
+
+Problem: Residents of Portland and South Portland in Maine have been reporting disruptive smells in the air
+on certain days of the year.
+South Portland has over 25,500 residents, and is the host of oil, gasoline, and asphalt tanks.
+These tanks do not have emissions controls and the emissions, in the form of odors,
+are reported in both South Portland and Portland.
+Many of the emissions are odorless and toxic, and may or may not correlate with odor complaints.
+It's been unclear what the source of the smells might be and difficult to understand the extent of the
+issue on both sides of the Fore River, which separates Portland and South Portland.
+
+The City of South Portland relies on [Smell My City](https://smellmycity.org/) for odor complaints,
+while Portland relies on [See Click Fix](https://seeclickfix.com/portland_2).
+The Department of Environmental Protection has
+[9 VOC Canister Monitors](https://www.maine.gov/dep/air/monitoring/spo-sampling-results.html)
+(volatile organic compounds) in Portland and South Portland.
+The tanks are considered [minor sources of air emissions](https://www.maine.gov/dep/air/permits/minor.html),
+and regulated accordingly.
+
+## Project goals.
+
+* Coordinate the various data sources
+  * Smell My City odor complaints (South Portland)
+  * See Click Fix odor complaints (Portland)
+  * DEP VOC sampling data
+  * Civilian grab canister results
+  * Tom Mikulka monitoring data (for comparison only)
+  * Weather patterns
+  * Tank fills and transfers (dependent on access to data)
+  * Individual tank inventory and temperature status
+* Clean the data and make it easily accessible for the general public
+* Create some simple visualizations
+* Add additional data from ME DEP (e.g., wind speed, direction, temperature, etc)
+Initial mapping will use compiled data, but the intent is to harvest data in real time to account
+for established correlations, additional sampling, and continued monitoring.
+Per [LD163](http://www.mainelegislature.org/legis/bills/getPDF.asp?paper=HP0119&item=2&snum=130),
+additional sampling will include:
+* Fenceline monitoring (continuous)
+* Self reported emissions testing on heated tanks (2x yearly)
+
+### Key stakeholders
+
+* Maria Guerra (Environmental Health Fellow, [Resilience Corps](https://www.gpcog.org/472/Resilience-Corps) at GPCOG)
+* Andrew Butcher (Director of Innovation & Resilience, [GPCOG](https://www.gpcog.org))
+* Luke Truman (Sierra Club's Maine Chapter)
+  * Luke has experience in data mapping, and working on projects with college students.
+  * He has been invested in this problem of Portland/South Portland air quality for some time.
+
+## Data
+
+* Excel spreadsheet -- for City of Portland, Maine
+  * [SeeClickFix](https://seeclickfix.com/portland_2) app for Portland residents
+  * residents add odor reports with the app
+  * these reports are collected by the city and sent (to us) monthly in an excel file
+* https://smellmycity.org/data
+  * This site has directions for accessing South Portland odor complaints
+  * Enter ZIP codes of interest (South Portland have several ZIP codes)
+  * This produces a spreadsheet for download
+* https://rainwise.net/weather/SMRO3
+  * This site has DEP weather reports.
+  * The top drop-down menu has reports of interest to the project.
+  * There are many stations, only a portion of them are online
+  * SMRO 3-7 (the units that are online) -- note the location at the bottom of the page.
+  * These were installed sometime in 2020 (that's when ME DEP started monitoring South Portland in particular)
+  * To download spreadsheets, hit the button at the top of the bar that is a downward arrow.
+  * We use data measured by the hour, so future updates require the user to download the weather data
+    in the same time frame. To do this, after clickin te "download data" icon, select "60 minutes"
+    from the interval dropdown from the Ennhanced Download section.
+* Oil terminals -- all of this data is in paper form
+  * When barges come into the Portland terminal to deliver or pick up oil, they have to give DEP notice
+  * There are written notifications from boats to ME DEP -- these are faxed paper copies
+  * We hope to be be getting this data...
 
 ### Smell reports
 
@@ -22,7 +104,7 @@ Summer 2021 term - links to Jupyter notebooks. (Links at the top of these notebo
 
 * All weather intermediary csv/files are present in the stinky/weather_data/weather_intermediary_files. If the raw pod data is updated, please run the weather_datasets.ipynb notebook to regenerate these files. Then update this directory with the new files generated.
 
-1. Files for download (this notebook will autmatically download the weather group's data sets/ all the weather intermediary files - just run to download). This notebook can be used to generate the intermediary files present in the weather_data/weather_intermediary_files directory. Please run this notebook if the any updates are made to the weather_data/pod_raw_data directory. Then use the generated files to replace the files in weather_data/weather_intermediary_files 
+1. Files for download (this notebook will autmatically download the weather group's data sets/ all the weather intermediary files - just run to download). This notebook can be used to generate the intermediary files present in the weather_data/weather_intermediary_files directory. Please run this notebook if the any updates are made to the weather_data/pod_raw_data directory. Then use the generated files to replace the files in weather_data/weather_intermediary_files
 * [weather_datasets.ipynb](https://github.com/ds5110/stinky/blob/master/weather_datasets.ipynb)
 
 2. This notebook contains the visualizations and analyses performed by the weather team - weather feature plots over time, weather and complaint quantity analysis and visualization, logistic modeling, etc. Text descriptions are included. This notebook may take 2-3 minutes to completely run as the visualizations are working with a large amount of data points. Every time this notebook is run any updates to the raw data files will be reflected in the notebook. Be aware that updating the raw files may change the conclusions of the analysis as new data may make our current conclusions obsolete.
@@ -41,7 +123,7 @@ Summer 2021 term - links to Jupyter notebooks. (Links at the top of these notebo
   * scf.csv: it is the original file with odor complaints from SmellMyCity
   * smc.csv: it is the original file with odor complaints from SeeClickFix
 * vessels_data/vessels_raw_data
-  * 2020 SMRO VESSEL ARRIVALS.csv: it is the original file containing all of oil vessels data for year 2020 
+  * 2020 SMRO VESSEL ARRIVALS.csv: it is the original file containing all of oil vessels data for year 2020
   * 2021 SMRO VESSEL ARRIVALS.csv: it is the original file containing all of oil vessels data for year 2021
 * weather_data/pod_raw_data
   * SMRO3_2019-07-24_2021-07-24.csv : Raw data from pod SMRO3, replace this file when updating raw files
@@ -62,82 +144,3 @@ Summer 2021 term - links to Jupyter notebooks. (Links at the top of these notebo
   * df_complaints: A dataframe that groups the total complaints by hour and aggregates the complaints by sum.
   * df_merged : A dataframe that groups measurements by the hour and merges the dataframe with the complaints. Weather values are aggregated by average and complaint totals are aggregated by sum.
   * df_model_analysis: a dataframe used for logistic regression analysis
-
-## Project Idea: This Stinks
-
-Problem: Residents of Portland and South Portland in Maine have been reporting disruptive smells in the air 
-on certain days of the year. 
-South Portland has over 25,500 residents, and is the host of oil, gasoline, and asphalt tanks. 
-These tanks do not have emissions controls and the emissions, in the form of odors, 
-are reported in both South Portland and Portland. 
-Many of the emissions are odorless and toxic, and may or may not correlate with odor complaints. 
-It's been unclear what the source of the smells might be and difficult to understand the extent of the 
-issue on both sides of the Fore River, which separates Portland and South Portland.
-
-The City of South Portland relies on [Smell My City](https://smellmycity.org/) for odor complaints, 
-while Portland relies on [See Click Fix](https://seeclickfix.com/portland_2).
-The Department of Environmental Protection has 
-[9 VOC Canister Monitors](https://www.maine.gov/dep/air/monitoring/spo-sampling-results.html)
-(volatile organic compounds) in Portland and South Portland. 
-The tanks are considered [minor sources of air emissions](https://www.maine.gov/dep/air/permits/minor.html),
-and regulated accordingly.
-
-### Project goals.
-
-* Coordinate the various data sources
-  * Smell My City odor complaints (South Portland)
-  * See Click Fix odor complaints (Portland)
-  * DEP VOC sampling data
-  * Civilian grab canister results
-  * Tom Mikulka monitoring data (for comparison only)
-  * Weather patterns
-  * Tank fills and transfers (dependent on access to data)
-  * Individual tank inventory and temperature status
-* Clean the data and make it easily accessible for the general public
-* Create some simple visualizations
-* Add additional data from ME DEP (e.g., wind speed, direction, temperature, etc)
-Initial mapping will use compiled data, but the intent is to harvest data in real time to account 
-for established correlations, additional sampling, and continued monitoring. 
-Per [LD163](http://www.mainelegislature.org/legis/bills/getPDF.asp?paper=HP0119&item=2&snum=130), 
-additional sampling will include: 
-* Fenceline monitoring (continuous)
-* Self reported emissions testing on heated tanks (2x yearly)
-
-### Project partners
-
-* The Greater Portland Council of Governments (GPCOG)
-* The Sierra Club
-* Roux Institute
-
-## data
-
-* Excel spreadsheet -- for City of Portland, Maine
-  * [SeeClickFix](https://seeclickfix.com/portland_2) app for Portland residents
-  * residents add odor reports with the app
-  * these reports are collected by the city and sent (to us) monthly in an excel file
-* https://smellmycity.org/data
-  * This site has directions for accessing South Portland odor complaints
-  * Enter ZIP codes of interest (South Portland have several ZIP codes) 
-  * This produces a spreadsheet for download
-* https://rainwise.net/weather/SMRO3
-  * This site has DEP weather reports. 
-  * The top drop-down menu has reports of interest to the project. 
-  * There are many stations, only a portion of them are online
-  * SMRO 3-7 (the units that are online) -- note the location at the bottom of the page. 
-  * These were installed sometime in 2020 (that's when ME DEP started monitoring South Portland in particular)
-  * To download spreadsheets, hit the button at the top of the bar that is a downward arrow.
-  * We use data measured by the hour, so future updates require the user to download the weather data
-    in the same time frame. To do this, after clickin te "download data" icon, select "60 minutes"
-    from the interval dropdown from the Ennhanced Download section.
-* Oil terminals -- all of this data is in paper form
-  * When barges come into the Portland terminal to deliver or pick up oil, they have to give DEP notice
-  * There are written notifications from boats to ME DEP -- these are faxed paper copies
-  * We hope to be be getting this data...
-
-## key people
-
-* Maria Guerra (Environmental Health Fellow, [Resilience Corps](https://www.gpcog.org/472/Resilience-Corps) at GPCOG)
-* Andrew Butcher (Director of Innovation & Resilience, [GPCOG](https://www.gpcog.org))
-* Luke Truman (Sierra Club's Maine Chapter)
-  * Luke has experience in data mapping, and working on projects with college students.
-  * He has been invested in this problem of Portland/South Portland air quality for some time.
