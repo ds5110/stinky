@@ -9,7 +9,7 @@ As of fall 2021, the project is ongoing.
 
 * The Greater Portland Council of Governments (GPCOG)
 * The Sierra Club
-* Roux Institute
+* The Roux Institute
 
 ## Project Idea: This Stinks
 
