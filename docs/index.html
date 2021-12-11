@@ -1,47 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stinky Project</title>
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="navbar.css" rel="stylesheet">
+  <style></style>
 </head>
+
 <body>
 
-<h1>Why is controlling Malodour Important?</h1>
-<p>Odour can be defined as a mixture of gases in the air that we can smell, which can both be pleasant or unpleasant smells (Victoria, 2020). Odour pollution refers to these unpleasant smells, which although can simple be unpleasant, it can have other risks associated with it. Milder negative externalities include feelings of duscodt or discomfort, which can lead to headaches, nausea, vomiting and also behavioural changes. (Shukla, 1991) It has been proven that our sense of smell gives a startling fast response to potentially dangerous situations, jerking us away from the stench and less willing to be in the source area as much (Genter, 2019). The surrounding houses and businesses have the potential of being greatly impacted if nobody wants to go around that area.
-More serious health effects can occur when the negative smells are also toxic in its nature, particularly to the respiratory system. Soot and dust are common smells that are cancerous and can damage our lungs and have a knock on effect on our body (Niranjan, 2017).</p>
-  
-  
-  
-<h1>Language Analysis</h1>
-<p>Here, the most used words to describe the malodour were put together to get a better understand of what kind of smells were most critical.</p>
-  
-  <iframe width="100%" height="476" frameborder="0"
-  src="https://observablehq.com/embed/c2397f201500cb0c?cells=languageAnalaysis"></iframe>
-  
-<h1>Appendix</h1>
-<p>Victoria (2020). About odour pollution. [online] Vic.gov.au. Available at: https://www.epa.vic.gov.au/for-community/environmental-information/odour/about-odour [Accessed 26 Nov. 2021].
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Portland Malodour Project (aka Stinky)</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./dashboard.html">Dashboard</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
-Shukla NP. Air pollution by odour--sources, identification and control. Rev Environ Health. 1991 Oct-Dec;9(4):239-44. doi: 10.1515/reveh.1991.9.4.239. PMID: 1842457.
+  <main>
 
-Genter MB, Doty RL. Toxic exposures and the senses of taste and smell. Handb Clin Neurol. 2019;164:389-408. doi: 10.1016/B978-0-444-63855-7.00022-8. PMID: 31604559.
+    <h1>Why is controlling Malodour Important?</h1>
+    <p>Odour can be defined as a mixture of gases in the air that we can smell, which can both be pleasant or unpleasant
+      smells (Victoria, 2020). Odour pollution refers to these unpleasant smells, which although can simple be
+      unpleasant,
+      it can have other risks associated with it. Milder negative externalities include feelings of duscodt or
+      discomfort,
+      which can lead to headaches, nausea, vomiting and also behavioural changes. (Shukla, 1991) It has been proven that
+      our sense of smell gives a startling fast response to potentially dangerous situations, jerking us away from the
+      stench and less willing to be in the source area as much (Genter, 2019). The surrounding houses and businesses
+      have
+      the potential of being greatly impacted if nobody wants to go around that area.
+      More serious health effects can occur when the negative smells are also toxic in its nature, particularly to the
+      respiratory system. Soot and dust are common smells that are cancerous and can damage our lungs and have a knock
+      on
+      effect on our body (Niranjan, 2017).</p>
 
-Niranjan, Rituraj, and Ashwani Kumar Thakur. “The Toxicological Mechanisms of Environmental Soot (Black Carbon) and Carbon Black: Focus on Oxidative Stress and Inflammatory Pathways.” Frontiers in immunology vol. 8 763. 30 Jun. 2017, doi:10.3389/fimmu.2017.00763</p>
 
+
+    <h1>Language Analysis</h1>
+    <p>Here, the most used words to describe the malodour were put together to get a better understand of what kind of
+      smells were most critical.</p>
+
+    <div id="languageChart"></div>
+    <iframe width="100%" height="476" frameborder="0"
+      src="https://observablehq.com/embed/c2397f201500cb0c?cells=languageAnalysis"></iframe>
+
+    <h1>Appendix</h1>
+    <p>Victoria (2020). About odour pollution. [online] Vic.gov.au. Available at:
+      https://www.epa.vic.gov.au/for-community/environmental-information/odour/about-odour [Accessed 26 Nov. 2021].
+
+      Shukla NP. Air pollution by odour--sources, identification and control. Rev Environ Health. 1991
+      Oct-Dec;9(4):239-44. doi: 10.1515/reveh.1991.9.4.239. PMID: 1842457.
+
+      Genter MB, Doty RL. Toxic exposures and the senses of taste and smell. Handb Clin Neurol. 2019;164:389-408. doi:
+      10.1016/B978-0-444-63855-7.00022-8. PMID: 31604559.
+
+      Niranjan, Rituraj, and Ashwani Kumar Thakur. “The Toxicological Mechanisms of Environmental Soot (Black Carbon)
+      and
+      Carbon Black: Focus on Oxidative Stress and Inflammatory Pathways.” Frontiers in immunology vol. 8 763. 30 Jun.
+      2017, doi:10.3389/fimmu.2017.00763</p>
+  </main>
 </body>
+
+<footer>
+  <script src="./bootstrap.bundle.min.js"></script>
+  <!-- <div id="observablehq-languageAnalaysis-b6fe0ca9"></div> -->
+  <p>Credit: <a href="https://observablehq.com/d/c2397f201500cb0c">Stinky Project - Prototype 2</a></p>
+
+  <script type="module">
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import stinkyNotebook from "https://api.observablehq.com/d/c2397f201500cb0c.js?v=3";
+    const main = new Runtime().module(stinkyNotebook, name => {
+      if (name === "languageAnalysis") return new Inspector.into("#languageChart")();
+      if (name === "myclasses") return true;
+    });
+  </script>
+</footer>
+
 </html>
-
-
-
-<div id="observablehq-languageAnalaysis-b6fe0ca9"></div>
-<p>Credit: <a href="https://observablehq.com/d/c2397f201500cb0c">Stinky Project - Prototype 2 by joffreycodes</a></p>
-
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/c2397f201500cb0c@3605.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "languageAnalaysis") return new Inspector(document.querySelector("#observablehq-languageAnalaysis-b6fe0ca9"));
-});
-</script>
-
-
-
-
