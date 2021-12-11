@@ -38,32 +38,55 @@
   </nav>
 
   <main>
+    <div
+      class="d-flex justify-content-between flex-direction flex-md-column align-items-left pt-3 pb-2 mb-3 border-bottom">
 
-    <h1>Why is controlling Malodour Important?</h1>
-    <p>Odour can be defined as a mixture of gases in the air that we can smell, which can both be pleasant or unpleasant
-      smells (Victoria, 2020). Odour pollution refers to these unpleasant smells, which although can simple be
-      unpleasant,
-      it can have other risks associated with it. Milder negative externalities include feelings of duscodt or
-      discomfort,
-      which can lead to headaches, nausea, vomiting and also behavioural changes. (Shukla, 1991) It has been proven that
-      our sense of smell gives a startling fast response to potentially dangerous situations, jerking us away from the
-      stench and less willing to be in the source area as much (Genter, 2019). The surrounding houses and businesses
-      have
-      the potential of being greatly impacted if nobody wants to go around that area.
-      More serious health effects can occur when the negative smells are also toxic in its nature, particularly to the
-      respiratory system. Soot and dust are common smells that are cancerous and can damage our lungs and have a knock
-      on
-      effect on our body (Niranjan, 2017).</p>
+      <h1>Why is controlling Malodour Important?</h1>
+      <div>
+        <p>Odour can be defined as a mixture of gases in the air that we can smell, which can both be pleasant or
+          unpleasant
+          smells (Victoria, 2020). Odour pollution refers to these unpleasant smells, which although can simple be
+          unpleasant,
+          it can have other risks associated with it. Milder negative externalities include feelings of duscodt or
+          discomfort,
+          which can lead to headaches, nausea, vomiting and also behavioural changes. (Shukla, 1991) It has been proven
+          that
+          our sense of smell gives a startling fast response to potentially dangerous situations, jerking us away from
+          the
+          stench and less willing to be in the source area as much (Genter, 2019). The surrounding houses and businesses
+          have
+          the potential of being greatly impacted if nobody wants to go around that area.
+          More serious health effects can occur when the negative smells are also toxic in its nature, particularly to
+          the
+          respiratory system. Soot and dust are common smells that are cancerous and can damage our lungs and have a
+          knock
+          on
+          effect on our body (Niranjan, 2017).</p>
+      </div>
 
-    <h1>Language Analysis</h1>
-    <p>Here, the most used words to describe the malodour were put together to get a better understand of what kind of
-      smells were most critical.</p>
+      <h1>Language Analysis</h1>
+      <div>
+        <p>Here, the most used words to describe the malodour were put together to get a better understand of what kind
+          of
+          smells were most critical.</p>
 
-    <div id="languageChart"></div> <!-- why wont this work? -->
-    <iframe width="100%" height="476" frameborder="0"
-      src="https://observablehq.com/embed/c2397f201500cb0c?cells=languageAnalysis"></iframe>
-    <!-- iframe shows up but not the chart contents -->
+        <!-- why wont this work? -->
+        <!-- <div id="languageChart"></div> -->
 
+        <!-- iframe shows up but not the chart contents -->
+        <!-- <iframe width="100%" height="476" frameborder="0"
+      src="https://observablehq.com/embed/c2397f201500cb0c?cells=languageAnalysis"></iframe> -->
+
+      </div>
+
+      <h1>Portland Demographics</h1>
+      <div class="my-4 w-75" id="demoMap"></div>
+      <!-- <div>
+        <iframe width="100%" height="537" frameborder="0"
+          src="https://observablehq.com/embed/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h?cells=viewof+smellDensityMap"></iframe>
+      </div> -->
+
+    </div>
   </main>
 </body>
 
@@ -81,19 +104,25 @@
 
     Niranjan, Rituraj, and Ashwani Kumar Thakur. “The Toxicological Mechanisms of Environmental Soot (Black Carbon)
     and Carbon Black: Focus on Oxidative Stress and Inflammatory Pathways.” Frontiers in immunology vol. 8 763. 30 Jun.
-    2017, doi:10.3389/fimmu.2017.00763<br><br></p>
+    2017, doi:10.3389/fimmu.2017.00763<br>
+  </p>
 
   <script src="./bootstrap.bundle.min.js"></script>
   <!-- <div id="observablehq-languageAnalaysis-b6fe0ca9"></div> -->
   <p>Credit: <a href="https://observablehq.com/d/c2397f201500cb0c">Stinky Project - Prototype 2</a></p>
 
   <script type="module">
+
     import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
     import stinkyNotebook from "https://api.observablehq.com/d/c2397f201500cb0c.js?v=3";
-    const main = new Runtime().module(stinkyNotebook, name => {
-      if (name === "languageAnalysis") return new Inspector.into("#languageChart")();
+    import demoNotebook from "https://api.observablehq.com/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h.js?v=3";
+
+    const main = new Runtime().module(demoNotebook, name => {
+      if (name === "viewof smellDensityMap") return Inspector.into("#demoMap")();
+      // if (name === "languageAnalysis") return new Inspector.into("#languageChart")();
       return true;
     });
+
   </script>
 </footer>
 
