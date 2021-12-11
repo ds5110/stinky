@@ -29,10 +29,10 @@
             <a class="nav-link" href="./dashboard.html">Dashboard</a>
           </li>
         </ul>
-        <form class="d-flex">
+        <!-- <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>
@@ -92,7 +92,7 @@
     import stinkyNotebook from "https://api.observablehq.com/d/c2397f201500cb0c.js?v=3";
     const main = new Runtime().module(stinkyNotebook, name => {
       if (name === "languageAnalysis") return new Inspector.into("#languageChart")();
-      if (name === "myclasses") return true;
+      return true;
     });
   </script>
 </footer>
