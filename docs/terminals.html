@@ -14,7 +14,6 @@
   </head>
 
 <body>
-
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
           <a class="navbar-brand" href="#">Portland Malodour Project (aka Stinky)</a>
@@ -34,39 +33,45 @@
                     <a class="nav-link active" href="./terminals.html">Terminals</a>
                 </li>
               </ul>
-              <!-- <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-              </form> -->
           </div>
       </div>
   </nav>
-  <div class="container-fluid content">
-    <div class="p-8 container">
-      <div class="row">
-        <div id="observablehq-viewof-stinkyDateSlider-5263f343"></div>
-      </div>
-      <div class="row">
-        <div id="observablehq-viewof-datesFilter-5263f343"></div>
-        <div class="mx-4 col">
-          <div id="observablehq-viewof-shipNameFilter-5263f343"></div>
+
+  <div class="container-fluid" class="row" style="width: 90%; border: 2px solid black;">
+    <div class="row" style="margin:auto; width: 90%; height: 100px; border: 2px solid black;">
+      DateSliderHere
+    </div>
+    <div class="row" style="margin:auto; width: 90%; height: 50px; border: 2px solid black;">
+      SelectAll Checkboxes Here
+    </div>  
+      <div class="row justify-content-start" style="margin:auto; width: 90%; height: 250px; border: 2px solid black;">
+        <div class="col-3" style="border: 2px solid black;">
+          TerminalSelection Here
         </div>
-        <div id="observablehq-viewof-productTypeFilter-5263f343"></div>
-      </div>
-      <div id="observablehq-viewof-terminalFilter-5263f343"></div>
-
-        <div id="observablehq-viewof-selectAllFilter-5263f343"></div>
-      </div>
-    </div>
-  
-    </div>
-    
-    <div id="observablehq-viewof-mymap-5263f343"></div>
-  
-    <p>Credit: <a href="https://observablehq.com/d/f6cce0018383da27">Stinky Project - Website Edits by joffreycodes</a></p>
-  
-
+        <div class="col-3" style="border: 2px solid black;">
+          ProductTypeSelectBox Here
+        </div>
+        <div class="col-3" style="border: 2px solid black;">
+          ShipName Here
+        </div>
+        <div class="col-3" style="border: 2px solid black;">
+          ArrivalDate Select Here
+        </div>
+      </div> 
+      <div class="row justify-content-start" style="margin:auto; width: 90%; height: 800px; border: 2px solid black;">Map Here</div>
+    </div> 
   </div>
+  
+  <div id="observablehq-viewof-stinkyDateSlider-5263f343"></div>
+  <div id="observablehq-viewof-datesFilter-5263f343"></div>
+  <div id="observablehq-viewof-shipNameFilter-5263f343"></div>
+  <div id="observablehq-viewof-productTypeFilter-5263f343"></div>
+  <div id="observablehq-viewof-selectAllFilter-5263f343"></div>
+  <div id="observablehq-viewof-mymap-5263f343"></div>
+  <div id="observablehq-viewof-terminalFilter-5263f343"></div>
+
+  <p>Credit: <a href="https://observablehq.com/d/f6cce0018383da27">Stinky Project - Website Edits by joffreycodes</a></p>
+  
   
   <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
