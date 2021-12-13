@@ -24,7 +24,7 @@
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-gap: 10px; 
-    width: 800px;
+    width: 1200px;
 }
 
 svg {

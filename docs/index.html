@@ -100,8 +100,11 @@
 
       <h1>Oil & Natural Gas Terminals</h1>
       <div>
-        <h3>Vessel Frequency by Terminal</h2>
-          <div id="terminalHistogram"></div>
+        <h3>Vessel Frequency by Terminal</h3>
+        <div id="terminalHistogram"></div>
+        <br><br>
+        <h3>Vessel Frequency by Cargo Type</h3>
+        <div id="cargoType"></div>
       </div>
 
     </div>
@@ -146,6 +149,7 @@
     import stinkyNotebook from "https://api.observablehq.com/d/c2397f201500cb0c.js?v=3";
     const main = new Runtime().module(stinkyNotebook, name => {
       if (name === "viewof terminalsData") return Inspector.into("#terminalHistogram")();
+      if (name === "viewof productTypeData") return Inspector.into("#cargoType")();
       return true;
     });
   </script>
