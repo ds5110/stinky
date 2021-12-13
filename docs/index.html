@@ -155,10 +155,18 @@
     const main = new Runtime().module(stinkyNotebook, name => {
       if (name === "viewof terminalsData") return Inspector.into("#terminalHistogram")();
       if (name === "viewof productTypeData") return Inspector.into("#cargoType")();
-      if (name === "mymapOldIan") return Inspector.into("#originalMap")();
       return true;
     });
   </script>
+  
+  <script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/5f52b5c1f6710e3b.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "mymapOldIan") return new Inspector.into("#originalMap")();
+  if (name === "leaflet") return;
+});
+</script>
 
 </footer>
 
