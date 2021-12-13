@@ -76,6 +76,11 @@
           damage our lungs and have a knock on effect on our body (Niranjan, 2017).</p>
       </div>
 
+      <h1>Original Project Prototype</h1>
+      <div>
+        <div id="originalMap"></div>
+      </div>
+
       <h1>Language Analysis</h1>
       <div>
         <p>Here, the most used words to describe the malodour were put together to get a better understand of what kind
@@ -150,17 +155,10 @@
     const main = new Runtime().module(stinkyNotebook, name => {
       if (name === "viewof terminalsData") return Inspector.into("#terminalHistogram")();
       if (name === "viewof productTypeData") return Inspector.into("#cargoType")();
+      if (name === "mymapOldIan") return Inspector.into("#originalMap")();
       return true;
     });
   </script>
-
-  <!-- <script>
-    var brushDiv = document.getElementById('demoTimeBrush');
-    var brushSVG = brushDiv.getElementsByTagName('svg');
-    brushSVG.setAttribute("viewBox", "0 0 750 100");
-    brushSVG.setAttribute("height", "100px");
-    brushSVG.setAttribute("width", "750px");
-  </script> -->
 
 </footer>
 
