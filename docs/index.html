@@ -83,7 +83,9 @@
 
       <h1>Language Analysis</h1>
       <div>
-        <p> With the reporting of the smell, the citizen can also describe the smell. Here, the most used words to describe the malodour were put together to get a better understand of what kinds of smells were most critical. Industrial smells, mainly oil and asphalt were smelled, as can be seen by the graph.</p>
+        <p> With the reporting of the smell, the citizen can also describe the smell. Here, the most used words to
+          describe the malodour were put together to get a better understand of what kinds of smells were most critical.
+          Industrial smells, mainly oil and asphalt were smelled, as can be seen by the graph.</p>
 
         <iframe width="100%" height="476" frameborder="0"
           src="https://observablehq.com/embed/c2397f201500cb0c?cells=languageAnalysis"></iframe>
@@ -113,13 +115,16 @@
         <!-- <iframe width="750" height="575" frameborder="0"
           src="https://observablehq.com/embed/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h?cells=viewof+smellDensityMap"></iframe> -->
       </div>
-          
-        <div>
-        <p> There seem to be three main clusters of 'stinky' data: the north-most is in the R-4 zoning, which classfies as residential. It borders more residential (R-6) and ROS (recreation open source) zoning.
 
-The clusters around South Portland are also in residential areas (A, G) but with neighbouring commerical (C) and limited business zoning (LB).
-          
-          Given the zoning, the smells to be affecting mostly households and community spaces, even though the smells are industrial.
+      <div>
+        <p> There seem to be three main clusters of 'stinky' data: the north-most is in the R-4 zoning, which classfies
+          as residential. It borders more residential (R-6) and ROS (recreation open source) zoning.
+
+          The clusters around South Portland are also in residential areas (A, G) but with neighbouring commerical (C)
+          and limited business zoning (LB).
+
+          Given the zoning, the smells to be affecting mostly households and community spaces, even though the smells
+          are industrial.
 
         </p>
       </div>
@@ -129,9 +134,11 @@ The clusters around South Portland are also in residential areas (A, G) but with
         not a strong enough signal to decude that any one particular weather value would have a significant effect on
         the frequency or severity of smells. The strongest signal found was from wind direction, in the cardinal
         direction of southwest.</p>
-      <div id="smellHeatMap"></div>
-      <div id="weatherFeatures"></div>
-      <div id="weatherHeatMap"></div>
+      <div class="weather-container">
+        <div id="smellHeatMap"></div>
+        <div id="weatherFeatures"></div>
+        <div id="weatherHeatMap"></div>
+      </div>
 
       <h1>Oil & Natural Gas Terminals</h1>
       <div>
@@ -214,23 +221,23 @@ The clusters around South Portland are also in residential areas (A, G) but with
       return true;
     });
   </script>
-  
+
   <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
     import define from "https://api.observablehq.com/@iellms/prototype-1-ian-ellmer.js?v=3";
     const main = new Runtime().module(define, name => {
       if (name === "viewof mymapOldIan") return new Inspector.into("#originalMap")();
       return true;
-});
-</script>
+    });
+  </script>
 
   <script type="module">
     import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import weatherNotebook from "https://api.observablehq.com/@kennsmithds/portland-maine-weather-with-legends@128.js?v=3";
-    new Runtime().module(weatherNotebook, name => {
-      if (name === "viewof weatherHeatMap") return new Inspector(document.into("#weatherHeatMap"));
-      if (name === "viewof smellHeatMap") return new Inspector(document.into("#smellHeatMap"));
-      if (name === "viewof weatherInput") return new Inspector(document.into("#weatherFeatures"))
+    import weatherNotebook from "https://api.observablehq.com/@kennsmithds/portland-maine-weather-with-legends.js?v=3";
+    const main = new Runtime().module(weatherNotebook, name => {
+      if (name === "viewof weatherHeatMap") return new Inspector.into("#weatherHeatMap")();
+      if (name === "viewof smellHeatMap") return new Inspector.into("#smellHeatMap")();
+      if (name === "viewof weatherInput") return new Inspector.into("#weatherFeatures")();
       return true;
     });
   </script>
