@@ -93,6 +93,18 @@
 
       <h1>Portland Demographics</h1>
       <div>
+        <p>
+          Understanding the demographics of a region affected by malodourous industrial sources can highlight
+          socio-economic disparities across cities and neighborhoods with regards to zoning, environmental regulation
+          and public health implications. From the map below, people who live in the census tracts most affected by the
+          smells reported tend to have lower to middle bracket of median income and lower property values, as well as
+          lower median age of
+          residents with less average rooms on the property and are rentals vs owned.<br><br>
+
+          Using the drop down menu below you can control what demographic features are shown by the choropleth layer
+          made of polygons overlaying the base map, and you can click and drag customized windows of time to filter the
+          heat map data.
+        </p>
         <div class="demo-control-container">
           <div id="demoDropdown"></div>
           <div id="demoLegend"></div>
@@ -103,12 +115,37 @@
           src="https://observablehq.com/embed/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h?cells=viewof+smellDensityMap"></iframe> -->
       </div>
 
+      <h1>Weather Patterns</h1>
+      <p>After performing a correlative analysis of weather variables to the smells, it was deteremined that there was
+        not a strong enough signal to decude that any one particular weather value would have a significant effect on
+        the frequency or severity of smells. The strongest signal found was from wind direction, in the cardinal
+        direction of southwest.</p>
+      <div id="smellHeatMap"></div>
+      <div id="weatherFeatures"></div>
+      <div id="weatherHeatMap"></div>
+
       <h1>Oil & Natural Gas Terminals</h1>
       <div>
-        <h3>Vessel Frequency by Terminal</h3>
+        <p>
+          Given that South Portland is the host of oil, gasoline, and asphalt tanks owned by a dozen Oil and Natural Gas
+          companies, it seems logical to understand the logistics of the deliveries of this flammable and toxic cargo.
+          Our team was given a data extract of vessel arrivals by date, terminal and cargo load, which can be further
+          explored on the <a href="./terminals.html">Terminal Dashboard</a> tab. But with just the two histograms shown
+          below, it is easy to infer that: <br>
+        <ol>
+          <li>
+            Buckeye and Citgo terminals are responsible for nearly 3/4 of the oil and natural gas vessels that enter
+            Portland Harbour
+          </li>
+          <li>
+            Similarly, unleaded gasoline and diesel make up a majority of the cargo/product type being delivered
+          </li>
+        </ol>
+        </p>
+        <h4>Vessel Frequency by Terminal</h4>
         <div id="terminalHistogram"></div>
         <br><br>
-        <h3>Vessel Frequency by Cargo Type</h3>
+        <h4>Vessel Frequency by Cargo Type</h4>
         <div id="cargoType"></div>
       </div>
 
@@ -118,20 +155,30 @@
 
 <footer class="body-padding">
   <h2>Appendix</h2>
-  <p>Victoria (2020). About odour pollution. [online] Vic.gov.au. Available at:
-    https://www.epa.vic.gov.au/for-community/environmental-information/odour/about-odour [Accessed 26 Nov. 2021].
-    <br><br>
+  <ul>
+    <li>Victoria (2020). About odour pollution. [online] Vic.gov.au. Available Available online at <a
+        href="https://www.epa.vic.gov.au/for-community/environmental-information/odour/about-odour" target="">Link</a>
+      [Accessed 26 Nov. 2021].</li>
 
-    Shukla NP. Air pollution by odour--sources, identification and control. Rev Environ Health. 1991
-    Oct-Dec;9(4):239-44. doi: 10.1515/reveh.1991.9.4.239. PMID: 1842457.<br><br>
+    <li>U.S. Census Bureau. American Community Survey 2019 5-Year Data API. Available online at <a
+        href="https://www.census.gov/data/developers/data-sets/acs-5year.html" target="">Link</a>
+      [Accessed 7 Dec. 2021].</li>
 
-    Genter MB, Doty RL. Toxic exposures and the senses of taste and smell. Handb Clin Neurol. 2019;164:389-408. doi:
-    10.1016/B978-0-444-63855-7.00022-8. PMID: 31604559.<br><br>
+    <li>State of Maine. Maine Census Tracts 2010 GeoLibrary. Available online at <a
+        href="https://maine.hub.arcgis.com/datasets/e7a7e490a9bf4bc08c7507f7aabe0f8a/" target="">Link</a>
+      [Accessed 27 Nov. 2021].</li>
 
-    Niranjan, Rituraj, and Ashwani Kumar Thakur. “The Toxicological Mechanisms of Environmental Soot (Black Carbon)
-    and Carbon Black: Focus on Oxidative Stress and Inflammatory Pathways.” Frontiers in immunology vol. 8 763. 30 Jun.
-    2017, doi:10.3389/fimmu.2017.00763<br>
-  </p>
+    <li>Shukla NP. Air pollution by odour--sources, identification and control. Rev Environ Health. 1991
+      Oct-Dec;9(4):239-44. doi: 10.1515/reveh.1991.9.4.239. PMID: 1842457.</li>
+
+    <li>Genter MB, Doty RL. Toxic exposures and the senses of taste and smell. Handb Clin Neurol. 2019;164:389-408. doi:
+      10.1016/B978-0-444-63855-7.00022-8. PMID: 31604559.</li>
+
+    <li>Niranjan, Rituraj, and Ashwani Kumar Thakur. “The Toxicological Mechanisms of Environmental Soot (Black Carbon)
+      and Carbon Black: Focus on Oxidative Stress and Inflammatory Pathways.” Frontiers in immunology vol. 8 763. 30
+      Jun.
+      2017, doi:10.3389/fimmu.2017.00763</li>
+  </ul>
 
   <p>Credit: <a href="https://observablehq.com/d/c2397f201500cb0c">Stinky Project - Prototype 2</a></p>
 
@@ -156,6 +203,17 @@
       if (name === "viewof terminalsData") return Inspector.into("#terminalHistogram")();
       if (name === "viewof productTypeData") return Inspector.into("#cargoType")();
       if (name === "mymapOldIan") return Inspector.into("#originalMap")();
+      return true;
+    });
+  </script>
+
+  <script type="module">
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import weatherNotebook from "https://api.observablehq.com/@kennsmithds/portland-maine-weather-with-legends@128.js?v=3";
+    new Runtime().module(weatherNotebook, name => {
+      if (name === "viewof weatherHeatMap") return new Inspector(document.into("#weatherHeatMap"));
+      if (name === "viewof smellHeatMap") return new Inspector(document.into("#smellHeatMap"));
+      if (name === "viewof weatherInput") return new Inspector(document.into("#weatherFeatures"))
       return true;
     });
   </script>
