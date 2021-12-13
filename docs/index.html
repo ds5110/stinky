@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stinky Project</title>
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="navbar.css" rel="stylesheet">
-  <link href="story.css" rel="stylesheet">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/navbar.css" rel="stylesheet">
+  <link href="./css/story.css" rel="stylesheet">
   <link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet">
   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
   <style></style>
@@ -112,8 +112,6 @@
         </div>
         <div class="part-width my-4" id="demoTimeBrush"></div>
         <div class="my-4 w-100" id="demoMap"></div>
-        <!-- <iframe width="750" height="575" frameborder="0"
-          src="https://observablehq.com/embed/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h?cells=viewof+smellDensityMap"></iframe> -->
       </div>
 
       <div>
@@ -198,49 +196,11 @@
 
   <p>Credit: <a href="https://observablehq.com/d/c2397f201500cb0c">Stinky Project - Prototype 2</a></p>
 
-  <script src="./bootstrap.bundle.min.js"></script>
-
-  <script type="module">
-    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import demoNotebook from "https://api.observablehq.com/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h.js?v=3";
-    const main = new Runtime().module(demoNotebook, name => {
-      if (name === "viewof smellDensityMap") return Inspector.into("#demoMap")();
-      if (name === "viewof weatherDateSlider") return Inspector.into("#demoTimeBrush")();
-      if (name === "viewof selectedFeature") return Inspector.into("#demoDropdown")();
-      if (name === "demoLegend") return Inspector.into("#demoLegend")();
-      return true;
-    });
-  </script>
-
-  <script type="module">
-    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import stinkyNotebook from "https://api.observablehq.com/d/c2397f201500cb0c.js?v=3";
-    const main = new Runtime().module(stinkyNotebook, name => {
-      if (name === "viewof terminalsData") return Inspector.into("#terminalHistogram")();
-      if (name === "viewof productTypeData") return Inspector.into("#cargoType")();
-      return true;
-    });
-  </script>
-
-  <script type="module">
-    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import define from "https://api.observablehq.com/@iellms/prototype-1-ian-ellmer.js?v=3";
-    const main = new Runtime().module(define, name => {
-      if (name === "viewof mymapOldIan") return new Inspector.into("#originalMap")();
-      return true;
-    });
-  </script>
-
-  <script type="module">
-    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import weatherNotebook from "https://api.observablehq.com/@kennsmithds/portland-maine-weather-with-legends.js?v=3";
-    const main = new Runtime().module(weatherNotebook, name => {
-      if (name === "viewof weatherHeatMap") return new Inspector.into("#weatherHeatMap")();
-      if (name === "viewof smellHeatMap") return new Inspector.into("#smellHeatMap")();
-      if (name === "viewof weatherInput") return new Inspector.into("#weatherFeatures")();
-      return true;
-    });
-  </script>
+  <script src="./scripts/bootstrap.bundle.min.js"></script>
+  <script src="./scripts/demographicsImport.js" type="module"></script>
+  <script src="./scripts/terminalImport.js" type="module"></script>
+  <script src="./scripts/prototypeImport.js" type="module"></script>
+  <script src="./scripts/weatherImport.js" type="module"></script>
 
 </footer>
 
