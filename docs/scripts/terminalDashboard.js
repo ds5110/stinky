@@ -8,5 +8,7 @@ new Runtime().module(define, name => {
     if (name === "viewof terminalFilter") return new Inspector(document.querySelector("#observablehq-viewof-terminalFilter-5263f343"));
     if (name === "viewof selectAllFilter") return new Inspector(document.querySelector("#observablehq-viewof-selectAllFilter-5263f343"));
     if (name === "viewof stinkyDateSlider") return new Inspector(document.querySelector("#observablehq-viewof-stinkyDateSlider-5263f343"));
-    return ["filteredData", "stinkyDataGeo", "stinkyDataCollection", "inclusiveFilteredVesselsData", "viewof filteredVesselsProductType", "viewof filteredVesselsTerminal", "DatesFromFilteredVesselsData", "filteredTerminals", "terminalsDataGeo", "terminalsLocationDataCollection", "smellDensityMap", "exclusiveFilteredVesselsData", "vesselsVar", "selectedDatesVesselsData"].includes(name);
+    if (name === "viewof mapData") return new Inspector(document.querySelector("#observablehq-viewof-mapData-42f2f98d"));
+
+    return ["filteredData", "stinkyDataGeo", "stinkyDataCollection", "inclusiveFilteredVesselsData", "viewof filteredVesselsProductType", "viewof filteredVesselsTerminal", "DatesFromFilteredVesselsData", "filteredTerminals", "terminalsDataGeo", "terminalsLocationDataCollection", "smellDensityMap", "exclusiveFilteredVesselsData", "vesselsVar", "selectedDatesVesselsData", "viewof mapData"].includes(name);
 });

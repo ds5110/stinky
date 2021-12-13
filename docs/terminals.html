@@ -9,9 +9,10 @@
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link href="./css/navbar.css" rel="stylesheet">
 
+  <link href="./css/dashboard.css" rel="stylesheet">
+
   <link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet">
   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-
 </head>
 
 <body>
@@ -35,44 +36,52 @@
     </div>
   </nav>
 
-  <div class="container-fluid" class="row" style="width: 90%; border: 2px solid black;">
-    <div class="row" style="margin:auto; width: 90%; height: 100px; border: 2px solid black;">
+  <div class="container-fluid" class="row" style="width: 95%;">
+    <div class="row" style="margin:auto; width: 100%; height: 100px; border: 2px solid black; border-bottom: 0; ">
       <div id="observablehq-viewof-stinkyDateSlider-5263f343"></div>
     </div>
-    <div class="row" style="margin:auto; width: 90%; height: 50px; border: 2px solid black;">
-      <div id="observablehq-viewof-selectAllFilter-5263f343"></div>
-    </div>
-    <div class="row justify-content-start" style="margin:auto; width: 90%; height: 250px; border: 2px solid black;">
+    <div class="row" style="margin:auto; width: 100%; height: 80vh; ">
       <div class="col-3" style="border: 2px solid black;">
-        <div id="observablehq-viewof-terminalFilter-5263f343"></div>
+        <div class="row" style="height: 10%; border-bottom: 2px solid black;">
+          <div id="observablehq-viewof-selectAllFilter-5263f343"></div>
+        </div>
+        <div class="row" style="height: 15%;">
+          <div id="observablehq-viewof-terminalFilter-5263f343"></div>
+        </div>
+        <div class="row" style="height: 25%;">
+          <div id="observablehq-viewof-productTypeFilter-5263f343"></div>
+        </div>
+        <div class="row" style="height: 25%;">
+          <div id="observablehq-viewof-shipNameFilter-5263f343"></div>
+        </div>
+        <div class="row" style="height: 25%;">
+          <div id="observablehq-viewof-datesFilter-5263f343"></div>
+        </div>
       </div>
-      <div class="col-3" style="border: 2px solid black;">
-        <div id="observablehq-viewof-productTypeFilter-5263f343"></div>
+      <div class="col-9" style="border: 2px solid black;">
+        <div class="row" style="margin-top:10px; width: 101%; height: 64%;">
+          <div id="observablehq-viewof-mymap-5263f343"></div>
+        </div>
+        <div class="row" style="padding-left:25px; padding-right:0; width: 102%;  height: 33%;">
+          <div id="observablehq-viewof-mapData-42f2f98d"></div>
+        </div>
       </div>
-      <div class="col-3" style="border: 2px solid black;">
-        <div id="observablehq-viewof-shipNameFilter-5263f343"></div>
-      </div>
-      <div class="col-3" style="border: 2px solid black;">
-        <div id="observablehq-viewof-datesFilter-5263f343"></div>
-      </div>
-    </div>
-    <div class="row justify-content-start" style="margin:auto; width: 90%; height: 800px; border: 2px solid black;">
-      <div id="observablehq-viewof-mymap-5263f343"></div>
     </div>
   </div>
 
-  <style>
-    #observablehq-viewof-stinkyDateSlider-5263f343 svg {
-      width: 98%;
-      height: 100%
-    }
-  </style>
-
-  <p>Credit: <a href="https://observablehq.com/d/f6cce0018383da27">Stinky Project - Website Edits by joffreycodes</a>
-  </p>
-
-  <script src="./scripts/terminalDashboard.js" type="module"></script>
-
+  <div>
+    <div class="container-fluid DashboardText" class="row" style="width: 95%;">
+      <br>
+      <h3>Notes:</h3>
+      
+      <p> This dashboard overlays port activity with odour reports ranging from January 2020 to June 2021.
+        <p>Coincidence #1 - Asphalt shipment on April 26, 2021 and reports made concerning tar and asphalt.</p>
+        <p></p>Coincidence #2 - On Noveber 11, 2020, the ship Cape Gavi performs unusual activity compared to any other active dates.</p>
+      
+      </div>
+  </div>
+  
 </body>
+<script src="./scripts/terminalDashboard.js" type="module"></script>
 
 </html>
