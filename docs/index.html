@@ -88,19 +88,20 @@
 
       <h1>Portland Demographics</h1>
       <div>
-        <div class="part-width my-4" id="demoTimeBrush"></div>
-        <div class="flex-direction flex-md-column">
+        <div class="demo-control-container">
           <div id="demoDropdown"></div>
           <div id="demoLegend"></div>
         </div>
-        <div class="my-4 w-75" id="demoMap"></div>
+        <div class="part-width my-4" id="demoTimeBrush"></div>
+        <div class="my-4 w-100" id="demoMap"></div>
         <!-- <iframe width="750" height="575" frameborder="0"
           src="https://observablehq.com/embed/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h?cells=viewof+smellDensityMap"></iframe> -->
       </div>
 
       <h1>Oil & Natural Gas Terminals</h1>
       <div>
-        <div id="terminalHistogram"></div>
+        <h3>Vessel Frequency by Terminal</h2>
+          <div id="terminalHistogram"></div>
       </div>
 
     </div>
@@ -127,11 +128,10 @@
   <p>Credit: <a href="https://observablehq.com/d/c2397f201500cb0c">Stinky Project - Prototype 2</a></p>
 
   <script src="./bootstrap.bundle.min.js"></script>
-  <script type="module">
 
+  <script type="module">
     import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
     import demoNotebook from "https://api.observablehq.com/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h.js?v=3";
-
     const main = new Runtime().module(demoNotebook, name => {
       if (name === "viewof smellDensityMap") return Inspector.into("#demoMap")();
       if (name === "viewof weatherDateSlider") return Inspector.into("#demoTimeBrush")();
@@ -139,19 +139,24 @@
       if (name === "demoLegend") return Inspector.into("#demoLegend")();
       return true;
     });
-
   </script>
 
   <script type="module">
     import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
     import stinkyNotebook from "https://api.observablehq.com/d/c2397f201500cb0c.js?v=3";
-
     const main = new Runtime().module(stinkyNotebook, name => {
       if (name === "viewof terminalsData") return Inspector.into("#terminalHistogram")();
       return true;
     });
-
   </script>
+
+  <!-- <script>
+    var brushDiv = document.getElementById('demoTimeBrush');
+    var brushSVG = brushDiv.getElementsByTagName('svg');
+    brushSVG.setAttribute("viewBox", "0 0 750 100");
+    brushSVG.setAttribute("height", "100px");
+    brushSVG.setAttribute("width", "750px");
+  </script> -->
 
 </footer>
 

@@ -19,3 +19,15 @@
 .body-padding {
     padding: 20px;
 }
+
+.demo-control-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px; 
+    width: 800px;
+}
+
+svg {
+    max-width: 1200px;
+    padding-left: 20px;
+}
