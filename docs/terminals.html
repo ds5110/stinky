@@ -2,39 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stinky Project</title>
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="navbar.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stinky Project</title>
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="navbar.css" rel="stylesheet">
 
-    <link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet">
+  <link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet">
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
 
-  </head>
+</head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#">Portland Malodour Project (aka Stinky)</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                  <li class="nav-item">
-                      <a class="nav-link" href="./index.html">Story</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" href="./dashboard.html">Dashboard</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="./terminals.html">Terminals</a>
-                </li>
-              </ul>
-          </div>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Portland Malodour Project (aka Stinky)</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./terminals.html">Terminal Dashboard</a>
+          </li>
+        </ul>
       </div>
+    </div>
   </nav>
 
   <div class="container-fluid" class="row" style="width: 90%; border: 2px solid black;">
@@ -43,27 +41,27 @@
     </div>
     <div class="row" style="margin:auto; width: 90%; height: 50px; border: 2px solid black;">
       <div id="observablehq-viewof-selectAllFilter-5263f343"></div>
-    </div>  
-      <div class="row justify-content-start" style="margin:auto; width: 90%; height: 250px; border: 2px solid black;">
-        <div class="col-3" style="border: 2px solid black;">
-          <div id="observablehq-viewof-terminalFilter-5263f343"></div>
-        </div>
-        <div class="col-3" style="border: 2px solid black;">
-          <div id="observablehq-viewof-productTypeFilter-5263f343"></div>
-        </div>
-        <div class="col-3" style="border: 2px solid black;">
-          <div id="observablehq-viewof-shipNameFilter-5263f343"></div>
-        </div>
-        <div class="col-3" style="border: 2px solid black;">
-          <div id="observablehq-viewof-datesFilter-5263f343"></div>
-        </div>
-      </div> 
-      <div class="row justify-content-start" style="margin:auto; width: 90%; height: 800px; border: 2px solid black;">
-        <div id="observablehq-viewof-mymap-5263f343"></div>
+    </div>
+    <div class="row justify-content-start" style="margin:auto; width: 90%; height: 250px; border: 2px solid black;">
+      <div class="col-3" style="border: 2px solid black;">
+        <div id="observablehq-viewof-terminalFilter-5263f343"></div>
       </div>
-    </div> 
+      <div class="col-3" style="border: 2px solid black;">
+        <div id="observablehq-viewof-productTypeFilter-5263f343"></div>
+      </div>
+      <div class="col-3" style="border: 2px solid black;">
+        <div id="observablehq-viewof-shipNameFilter-5263f343"></div>
+      </div>
+      <div class="col-3" style="border: 2px solid black;">
+        <div id="observablehq-viewof-datesFilter-5263f343"></div>
+      </div>
+    </div>
+    <div class="row justify-content-start" style="margin:auto; width: 90%; height: 800px; border: 2px solid black;">
+      <div id="observablehq-viewof-mymap-5263f343"></div>
+    </div>
   </div>
-  
+  </div>
+
   <!-- <div id="observablehq-viewof-stinkyDateSlider-5263f343"></div>
   <div id="observablehq-viewof-datesFilter-5263f343"></div>
   <div id="observablehq-viewof-shipNameFilter-5263f343"></div>
@@ -72,11 +70,12 @@
   <div id="observablehq-viewof-mymap-5263f343"></div>
   <div id="observablehq-viewof-terminalFilter-5263f343"></div> -->
 
-  <p>Credit: <a href="https://observablehq.com/d/f6cce0018383da27">Stinky Project - Website Edits by joffreycodes</a></p>
-  
-  
+  <p>Credit: <a href="https://observablehq.com/d/f6cce0018383da27">Stinky Project - Website Edits by joffreycodes</a>
+  </p>
+
+
   <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
     import define from "https://api.observablehq.com/d/f6cce0018383da27.js?v=3";
     new Runtime().module(define, name => {
       if (name === "viewof mymap") return new Inspector(document.querySelector("#observablehq-viewof-mymap-5263f343"));
@@ -86,12 +85,10 @@
       if (name === "viewof terminalFilter") return new Inspector(document.querySelector("#observablehq-viewof-terminalFilter-5263f343"));
       if (name === "viewof selectAllFilter") return new Inspector(document.querySelector("#observablehq-viewof-selectAllFilter-5263f343"));
       if (name === "viewof stinkyDateSlider") return new Inspector(document.querySelector("#observablehq-viewof-stinkyDateSlider-5263f343"));
-      return ["filteredData","stinkyDataGeo","stinkyDataCollection","inclusiveFilteredVesselsData","viewof filteredVesselsProductType","viewof filteredVesselsTerminal","DatesFromFilteredVesselsData","filteredTerminals","terminalsDataGeo","terminalsLocationDataCollection","smellDensityMap","exclusiveFilteredVesselsData","vesselsVar","selectedDatesVesselsData"].includes(name);
+      return ["filteredData", "stinkyDataGeo", "stinkyDataCollection", "inclusiveFilteredVesselsData", "viewof filteredVesselsProductType", "viewof filteredVesselsTerminal", "DatesFromFilteredVesselsData", "filteredTerminals", "terminalsDataGeo", "terminalsLocationDataCollection", "smellDensityMap", "exclusiveFilteredVesselsData", "vesselsVar", "selectedDatesVesselsData"].includes(name);
     });
   </script>
-  
+
 </body>
 
 </html>
-
-

@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stinky Project</title>
-  <!-- Bootstrap core CSS -->
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href="navbar.css" rel="stylesheet">
+  <link href="story.css" rel="stylesheet">
   <link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet">
-
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
   <style></style>
 </head>
 
@@ -28,84 +28,79 @@
             <a class="nav-link active" href="#">Story</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./dashboard.html">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./terminals.html">Terminals</a>
+            <a class="nav-link" href="./terminals.html">Terminal Dashboard</a>
           </li>
         </ul>
-        <!-- <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> -->
       </div>
     </div>
   </nav>
 
-  <main>
+  <main class="body-padding">
     <div
       class="d-flex justify-content-between flex-direction flex-md-column align-items-left pt-3 pb-2 mb-3 border-bottom">
 
-  <h1>Scope of Project</h1>
+      <h1>Scope of Project</h1>
       <div>
         <p> Residents of Portland and South Portland in Maine have been reporting disruptive smells in the air
-on certain days of the year.
-South Portland has over 25,500 residents, and is the host of oil, gasoline, and asphalt tanks.
-These tanks do not have emissions controls and the emissions, in the form of odors,
-are reported in both South Portland and Portland.
-Many of the emissions are odorless and toxic, and may or may not correlate with odor complaints.
-It's been unclear what the source of the smells might be and difficult to understand the extent of the
-issue on both sides of the Fore River, which separates Portland and South Portland.
+          on certain days of the year.
+          South Portland has over 25,500 residents, and is the host of oil, gasoline, and asphalt tanks.
+          These tanks do not have emissions controls and the emissions, in the form of odors,
+          are reported in both South Portland and Portland.
+          Many of the emissions are odorless and toxic, and may or may not correlate with odor complaints.
+          It's been unclear what the source of the smells might be and difficult to understand the extent of the
+          issue on both sides of the Fore River, which separates Portland and South Portland.
 
-The City of South Portland relies on <a href="https://smellmycity.org/">Smell My City</a> for odor complaints,
-while Portland relies on <a href="https://seeclickfix.com/portland_2">See Click Fix<a/>.
-The Department of Environmental Protection has <a href="https://www.maine.gov/dep/air/monitoring/spo-sampling-results.html">0 VOC Canister Monitors<a/>
-(volatile organic compounds) in Portland and South Portland.
-The tanks are considered <a href="https://www.maine.gov/dep/air/permits/minor.html">minor sources of air emissions<a/>,
-and regulated accordingly.        
-        
+          The City of South Portland relies on <a href="https://smellmycity.org/">Smell My City</a> for odor complaints,
+          while Portland relies on <a href="https://seeclickfix.com/portland_2">See Click Fix<a />.
+            The Department of Environmental Protection has <a
+              href="https://www.maine.gov/dep/air/monitoring/spo-sampling-results.html">0 VOC Canister Monitors<a />
+              (volatile organic compounds) in Portland and South Portland.
+              The tanks are considered <a href="https://www.maine.gov/dep/air/permits/minor.html">minor sources of air
+                emissions<a />,
+                and regulated accordingly.
+
         </p>
       </div>
 
       <h1>Why is Controlling Malodour Important?</h1>
       <div>
         <p>Odour can be defined as a mixture of gases in the air that we can smell, which can both be pleasant or
-          unpleasant
-          smells (Victoria, 2020). Odour pollution refers to these unpleasant smells, which although can simple be
-          unpleasant,
-          it can have other risks associated with it. Milder negative externalities include feelings of duscodt or
-          discomfort,
-          which can lead to headaches, nausea, vomiting and also behavioural changes. (Shukla, 1991) It has been proven
-          that
-          our sense of smell gives a startling fast response to potentially dangerous situations, jerking us away from
-          the
-          stench and less willing to be in the source area as much (Genter, 2019). The surrounding houses and businesses
-          have
-          the potential of being greatly impacted if nobody wants to go around that area.
-          More serious health effects can occur when the negative smells are also toxic in its nature, particularly to
-          the
-          respiratory system. Soot and dust are common smells that are cancerous and can damage our lungs and have a
-          knock
-          on
-          effect on our body (Niranjan, 2017).</p>
+          unpleasant smells (Victoria, 2020). Odour pollution refers to these unpleasant smells, which although can
+          simple be unpleasant, it can have other risks associated with it. Milder negative externalities include
+          feelings of duscodt or discomfort, which can lead to headaches, nausea, vomiting and also behavioural changes.
+          (Shukla, 1991) It has been proven that our sense of smell gives a startling fast response to potentially
+          dangerous situations, jerking us away from the stench and less willing to be in the source area as much
+          (Genter, 2019). The surrounding houses and businesses have the potential of being greatly impacted if nobody
+          wants to go around that area. More serious health effects can occur when the negative smells are also toxic in
+          its nature, particularly to the respiratory system. Soot and dust are common smells that are cancerous and can
+          damage our lungs and have a knock on effect on our body (Niranjan, 2017).</p>
       </div>
 
       <h1>Language Analysis</h1>
       <div>
         <p>Here, the most used words to describe the malodour were put together to get a better understand of what kind
-          of
-          smells were most critical.</p>
-        
+          of smells were most critical.</p>
+
         <iframe width="100%" height="476" frameborder="0"
-  src="https://observablehq.com/embed/c2397f201500cb0c?cells=languageAnalysis"></iframe>
-        
+          src="https://observablehq.com/embed/c2397f201500cb0c?cells=languageAnalysis"></iframe>
+
       </div>
 
       <h1>Portland Demographics</h1>
-      <!-- <div class="my-4 w-75" id="demoMap"></div> -->
       <div>
-        <iframe width="750" height="575" frameborder="0"
-          src="https://observablehq.com/embed/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h?cells=viewof+smellDensityMap"></iframe>
+        <div class="part-width my-4" id="demoTimeBrush"></div>
+        <div>
+          <div id="demoDropdown"></div>
+          <div id="demoLegend"></div>
+        </div>
+        <div class="my-4 w-75" id="demoMap"></div>
+        <!-- <iframe width="750" height="575" frameborder="0"
+          src="https://observablehq.com/embed/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h?cells=viewof+smellDensityMap"></iframe> -->
+      </div>
+
+      <h1>Oil & Natural Gas Terminals</h1>
+      <div>
+        <div class="part-width my-4" id="terminalHistogram"></div>
       </div>
 
     </div>
@@ -129,23 +124,35 @@ and regulated accordingly.
     2017, doi:10.3389/fimmu.2017.00763<br>
   </p>
 
-  <script src="./bootstrap.bundle.min.js"></script>
-  <!-- <div id="observablehq-languageAnalaysis-b6fe0ca9"></div> -->
   <p>Credit: <a href="https://observablehq.com/d/c2397f201500cb0c">Stinky Project - Prototype 2</a></p>
 
+  <script src="./bootstrap.bundle.min.js"></script>
   <script type="module">
 
     import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import stinkyNotebook from "https://api.observablehq.com/d/c2397f201500cb0c.js?v=3";
     import demoNotebook from "https://api.observablehq.com/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h.js?v=3";
 
     const main = new Runtime().module(demoNotebook, name => {
       if (name === "viewof smellDensityMap") return Inspector.into("#demoMap")();
-      // if (name === "languageAnalysis") return new Inspector.into("#languageChart")();
+      if (name === "viewof weatherDateSlider") return Inspector.into("#demoTimeBrush")();
+      if (name === "viewof selectedFeature") return Inspector.into("#demoDropdown")();
+      if (name === "demoLegend") return Inspector.into("#demoLegend")();
       return true;
     });
 
   </script>
+
+  <script type="module">
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import stinkyNotebook from "https://api.observablehq.com/d/c2397f201500cb0c.js?v=3";
+
+    const main = new Runtime().module(stinkyNotebook, name => {
+      if (name === "viewof terminalsData") return Inspector.into("#terminalHistogram")();
+      return true;
+    });
+
+  </script>
+
 </footer>
 
 </html>
