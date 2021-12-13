@@ -78,13 +78,12 @@
 
       <h1>Original Project Prototype</h1>
       <div>
-        <div id="originalMap"></div>
+        <div class="my-4 w-100" id="originalMap"></div>
       </div>
 
       <h1>Language Analysis</h1>
       <div>
-        <p>Here, the most used words to describe the malodour were put together to get a better understand of what kind
-          of smells were most critical.</p>
+        <p> With the reporting of the smell, the citizen can also describe the smell. Here, the most used words to describe the malodour were put together to get a better understand of what kinds of smells were most critical. Industrial smells, mainly oil and asphalt were smelled, as can be seen by the graph.</p>
 
         <iframe width="100%" height="476" frameborder="0"
           src="https://observablehq.com/embed/c2397f201500cb0c?cells=languageAnalysis"></iframe>
@@ -113,6 +112,16 @@
         <div class="my-4 w-100" id="demoMap"></div>
         <!-- <iframe width="750" height="575" frameborder="0"
           src="https://observablehq.com/embed/@kennsmithds/portland-maine-demographics-with-malodorous-time-series-h?cells=viewof+smellDensityMap"></iframe> -->
+      </div>
+          
+        <div>
+        <p> There seem to be three main clusters of 'stinky' data: the north-most is in the R-4 zoning, which classfies as residential. It borders more residential (R-6) and ROS (recreation open source) zoning.
+
+The clusters around South Portland are also in residential areas (A, G) but with neighbouring commerical (C) and limited business zoning (LB).
+          
+          Given the zoning, the smells to be affecting mostly households and community spaces, even though the smells are industrial.
+
+        </p>
       </div>
 
       <h1>Weather Patterns</h1>
@@ -202,10 +211,18 @@
     const main = new Runtime().module(stinkyNotebook, name => {
       if (name === "viewof terminalsData") return Inspector.into("#terminalHistogram")();
       if (name === "viewof productTypeData") return Inspector.into("#cargoType")();
-      if (name === "mymapOldIan") return Inspector.into("#originalMap")();
       return true;
     });
   </script>
+  
+  <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@iellms/prototype-1-ian-ellmer.js?v=3";
+    const main = new Runtime().module(define, name => {
+      if (name === "viewof mymapOldIan") return new Inspector.into("#originalMap")();
+      return true;
+});
+</script>
 
   <script type="module">
     import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
