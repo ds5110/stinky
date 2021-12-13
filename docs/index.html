@@ -160,10 +160,11 @@
   </script>
   
   <script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/5f52b5c1f6710e3b.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "viewof mymapOldIan") return new Inspector.into("#originalMap")();
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@iellms/prototype-1-ian-ellmer.js?v=3";
+    const main = new Runtime().module(define, name => {
+      if (name === "viewof mymapOldIan") return new Inspector.into("#originalMap")();
+      return true;
 });
 </script>
 
